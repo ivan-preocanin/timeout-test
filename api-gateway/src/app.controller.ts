@@ -7,10 +7,6 @@ export class AppController {
 
   @Get('/ping-a')
   async pingServiceA() {
-    await new Promise(res => {
-      setTimeout(res, 30 * 1000);
-    });
-
     return this.appService.pingServiceA();
   }
 }
